@@ -707,7 +707,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 78653434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1026933587}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &78653434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,7 +1090,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 132075360}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1751031200}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &132075360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1199,7 +1223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 144718025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1412331216}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &144718025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1900,6 +1936,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &212117300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 212117302}
+  - component: {fileID: 212117301}
+  m_Layer: 0
+  m_Name: ChildUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &212117301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212117300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e286ac0398ded4e8b862b0b44fab49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChildUIManager
+  Tobirasentaku: {fileID: 0}
+  Kuesutosentaku: {fileID: 0}
+  Kuesutozikkou: {fileID: 0}
+  Kuesutozikkouhousyu: {fileID: 0}
+  Kuesutozikkousippai: {fileID: 0}
+  Kyarakutahyouzi: {fileID: 0}
+  Kyarakutakisekae: {fileID: 0}
+  Kyarakutajenkou: {fileID: 0}
+--- !u!4 &212117302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212117300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 862.175, y: 317.42682, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214617491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,6 +3430,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285416930}
   m_CullTransparentMesh: 1
+--- !u!1 &290627540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 290627542}
+  - component: {fileID: 290627541}
+  m_Layer: 0
+  m_Name: ChildSceneManeger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &290627541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290627540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e286ac0398ded4e8b862b0b44fab49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChildSceneManager
+  Tobirasentaku: {fileID: 1525576353}
+  Kuesutosentaku: {fileID: 1751031200}
+  Kuesutozikkou: {fileID: 70524206}
+  Kuesutozikkouhousyu: {fileID: 1842758723}
+  Kuesutozikkousippai: {fileID: 1763542361}
+  Kyarakutahyouzi: {fileID: 1412331216}
+  Kyarakutakisekae: {fileID: 1026933587}
+  Kyarakutajenkou: {fileID: 1597404686}
+--- !u!4 &290627542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290627540}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 848.8709, y: 239.19539, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &293272752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,7 +3742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 302909694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 70524206}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &302909694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3860,7 +4012,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 328288272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &328288272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5031,7 +5195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &437061529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5095,7 +5259,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 437061531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1751031200}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &437061531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5457,7 +5633,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 503837014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1412331216}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &503837014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5715,7 +5903,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 520516083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1842758723}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &520516083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7934,7 +8134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &706385710
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9211,8 +9411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48, y: 410}
-  m_SizeDelta: {x: 421.7474, y: 123.6225}
+  m_AnchoredPosition: {x: -57, y: 420.04016}
+  m_SizeDelta: {x: 377.6087, y: 111.0114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817710871
 MonoBehaviour:
@@ -11966,8 +12166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: 411}
-  m_SizeDelta: {x: 485.7599, y: 146.1403}
+  m_AnchoredPosition: {x: -42.70868, y: 411}
+  m_SizeDelta: {x: 580.3425, y: 146.1403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032523492
 MonoBehaviour:
@@ -12832,7 +13032,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1117763604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1525576353}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1117763604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12953,7 +13165,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121580223}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1412331216}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1121580223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14985,6 +15209,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236178242}
   m_CullTransparentMesh: 1
+--- !u!1 &1265189044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265189047}
+  - component: {fileID: 1265189046}
+  - component: {fileID: 1265189045}
+  m_Layer: 0
+  m_Name: CildUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1265189045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265189044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e286ac0398ded4e8b862b0b44fab49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChildUIManager
+  Tobirasentaku: {fileID: 0}
+  Kuesutosentaku: {fileID: 0}
+  Kuesutozikkou: {fileID: 0}
+  Kuesutozikkouhousyu: {fileID: 0}
+  Kuesutozikkousippai: {fileID: 0}
+  Kyarakutahyouzi: {fileID: 0}
+  Kyarakutakisekae: {fileID: 0}
+  Kyarakutajenkou: {fileID: 0}
+--- !u!114 &1265189046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265189044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e286ac0398ded4e8b862b0b44fab49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChildUIManager
+  Tobirasentaku: {fileID: 0}
+  Kuesutosentaku: {fileID: 0}
+  Kuesutozikkou: {fileID: 0}
+  Kuesutozikkouhousyu: {fileID: 0}
+  Kuesutozikkousippai: {fileID: 0}
+  Kyarakutahyouzi: {fileID: 0}
+  Kyarakutakisekae: {fileID: 0}
+  Kyarakutajenkou: {fileID: 0}
+--- !u!4 &1265189047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265189044}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 916.3698, y: 481.231, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267506285
 GameObject:
   m_ObjectHideFlags: 0
@@ -16902,7 +17199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1414412160}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1751031200}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1414412160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17338,7 +17647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1432081284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1751031200}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1432081284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17774,7 +18095,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1441721397}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1597404686}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1441721397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18073,7 +18406,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1461142298}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 70524206}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1461142298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19443,7 +19788,7 @@ GameObject:
   - component: {fileID: 1597404689}
   - component: {fileID: 1597404688}
   m_Layer: 5
-  m_Name: Kyarakuata-henkou
+  m_Name: Kyarakuta-henkou
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19897,7 +20242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1634628336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1751031200}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1634628336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21075,7 +21432,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1738782217}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1751031200}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1738782217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21276,7 +21645,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751031200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21872,7 +22241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150.01, y: -407.27}
+  m_AnchoredPosition: {x: -169.06, y: -411.6}
   m_SizeDelta: {x: 310.52, y: 120.11}
   m_Pivot: {x: 1.72433, y: -0.66643286}
 --- !u!114 &1784455895
@@ -21918,7 +22287,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1784455896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1751031200}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1784455896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23021,8 +23402,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23368,8 +23749,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24132,7 +24513,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1945515600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1525576353}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1945515600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24253,7 +24646,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1952855666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1525576353}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1952855666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24617,13 +25022,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1525576354}
-  - {fileID: 1751031201}
   - {fileID: 70524207}
   - {fileID: 1842758724}
   - {fileID: 1763542362}
   - {fileID: 1412331217}
   - {fileID: 1026933588}
   - {fileID: 1597404687}
+  - {fileID: 1751031201}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -24713,7 +25118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1972434809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 70524206}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1972434809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26660,7 +27077,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2089431467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290627541}
+        m_TargetAssemblyTypeName: ChildSceneManager, Assembly-CSharp
+        m_MethodName: ShowPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 70524206}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2089431467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27711,8 +28140,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28022,3 +28451,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 2018091901}
   - {fileID: 1964293060}
+  - {fileID: 1265189047}
+  - {fileID: 212117302}
+  - {fileID: 290627542}
