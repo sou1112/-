@@ -170,6 +170,12 @@ MonoBehaviour:
   parentQuestEditPanel: {fileID: 1759780205}
   parentDailyQuestSelectPanel: {fileID: 626742006}
   parentQuestListPanel: {fileID: 932228878}
+  questListSummaryText: {fileID: 0}
+  unapprovedLogText: {fileID: 0}
+  questTitleInput: {fileID: 527790515}
+  rewardCoinsInput: {fileID: 1220657318}
+  rewardExpInput: {fileID: 758492248}
+  saveFeedbackText: {fileID: 0}
 --- !u!1 &6857676
 GameObject:
   m_ObjectHideFlags: 0
@@ -24637,7 +24643,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 895640282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3962199}
+        m_TargetAssemblyTypeName: ParentSceneManager, Assembly-CSharp
+        m_MethodName: LoadSceneByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CommonScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &895640282
 MonoBehaviour:
   m_ObjectHideFlags: 0
