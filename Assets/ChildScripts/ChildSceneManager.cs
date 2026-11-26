@@ -15,6 +15,7 @@ public class ChildSceneManager : MonoBehaviour
     [SerializeField] private GameObject Kyarakutajenkou;
 
 
+
     private void Start()
     {
         // ゲーム開始時はホーム画面（SRP-02）を表示
@@ -32,6 +33,7 @@ public class ChildSceneManager : MonoBehaviour
         Kyarakutahyouzi.SetActive(false);
         Kyarakutakisekae.SetActive(false);
         Kyarakutajenkou.SetActive(false);
+   
 
         if (targetPanel != null)
         {
