@@ -41,6 +41,20 @@ public class CommonManager : MonoBehaviour
     [SerializeField] private TMP_InputField regConfirmPasswordInput;
     [SerializeField] private TMP_Text regErrorText;
 
+    // ==========================================
+    // フィールド欄（[Header("API連携用：新規登録入力UI")] の下あたり）に追加
+    // ==========================================
+    [Header("API連携用：アカウント画面表示UI（任意）")]
+    [SerializeField] private TMP_Text accountUserIdText;
+    [SerializeField] private TMP_Text accountEmailText;
+    [SerializeField] private TMP_Text accountChildNameText;
+
+    [Header("API連携用：パスワード変更ダイアログUI")]
+    [SerializeField] private TMP_InputField currentPassInput;
+    [SerializeField] private TMP_InputField newPassInput;
+    [SerializeField] private TMP_InputField confirmNewPassInput;
+    [SerializeField] private TMP_Text passChangeErrorText;
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetSessionOnPlay()
     {
@@ -268,6 +282,128 @@ public class CommonManager : MonoBehaviour
                 if (regErrorText != null) regErrorText.text = "このメールアドレスは既に登録されているか、通信エラーです";
             }
         ));
+    }
+
+    // ==========================================
+    // メソッド欄（OnClickRegister の下あたり）に追加
+    // ==========================================
+
+    // TitlePanelAfterLogin の「アカウント」ボタンの OnClick に設定
+    // （既存の ShowPanel(AccountPanel) の代わりにこれを呼ぶと情報取得も同時に行います）
+    public void OpenAccountPanel()
+    {
+        ShowPanel(AccountPanel);
+
+        if (string.IsNullOrEmpty(UserSession.UserId)) return;
+
+        if (accountUserIdText != null) accountUserIdText.text = UserSession.UserId;
+        if (accountChildNameText != null) accountChildNameText.text = UserSession.ChildName;
+
+        // DBから最新のメールアドレス・子供の名前を取得して反映
+        StartCoroutine(ApiClient.Instance.GetRequest(
+            $"/user?userId={UserSession.UserId}",
+            onSuccess: (json) =>
+            {
+                UserInfoResponse info = JsonUtility.FromJson<UserInfoResponse>(json);
+                if (info != null)
+                {
+                    if (accountUserIdText != null) accountUserIdText.text = info.userId;
+                    if (accountEmailText != null) accountEmailText.text = info.email;
+                    if (accountChildNameText != null) accountChildNameText.text = info.childName;
+                }
+            },
+            onError: (err) => Debug.LogError($"ユーザー情報取得エラー: {err}")
+        ));
+    }
+
+    // AccountPanel の「変更」ボタンの OnClick に設定（入力欄を空にしてダイアログを開く）
+    public void OpenPasswordChangeDialog()
+    {
+        if (currentPassInput != null) currentPassInput.text = "";
+        if (newPassInput != null) newPassInput.text = "";
+        if (confirmNewPassInput != null) confirmNewPassInput.text = "";
+        if (passChangeErrorText != null) passChangeErrorText.text = "";
+
+        OpenDialog(PasswordChangeDialog);
+    }
+
+    // PasswordChangeDialog の「変更」ボタンの OnClick に設定
+    public void OnClickChangePassword()
+    {
+        if (passChangeErrorText != null) passChangeErrorText.text = "";
+
+        if (currentPassInput == null || newPassInput == null || confirmNewPassInput == null)
+        {
+            Debug.LogError("CommonSceneManager の Inspector でパスワード変更用の3つの入力欄が未割り当てです");
+            return;
+        }
+
+        string currentPass = currentPassInput.text.Trim();
+        string newPass = newPassInput.text.Trim();
+        string confirmPass = confirmNewPassInput.text.Trim();
+
+        // 1. 未入力チェック
+        if (string.IsNullOrEmpty(currentPass) || string.IsNullOrEmpty(newPass) || string.IsNullOrEmpty(confirmPass))
+        {
+            if (passChangeErrorText != null) passChangeErrorText.text = "すべての項目を入力してください";
+            return;
+        }
+
+        // 2. 新しいパスワードの一致チェック
+        if (newPass != confirmPass)
+        {
+            if (passChangeErrorText != null) passChangeErrorText.text = "新しいパスワード（確認用）が一致しません";
+            return;
+        }
+
+        // 3. 同じパスワードへの変更防止チェック
+        if (currentPass == newPass)
+        {
+            if (passChangeErrorText != null) passChangeErrorText.text = "現在と異なる新しいパスワードを入力してください";
+            return;
+        }
+
+        PasswordChangeRequest req = new PasswordChangeRequest
+        {
+            userId = UserSession.UserId,
+            currentPassword = currentPass,
+            newPassword = newPass
+        };
+
+        string json = JsonUtility.ToJson(req);
+
+        StartCoroutine(ApiClient.Instance.PostRequest(
+            "/change-password",
+            json,
+            onSuccess: (responseJson) =>
+            {
+                Debug.Log("パスワード変更成功");
+                CloseDialog(PasswordChangeDialog);
+            },
+            onError: (err) =>
+            {
+                if (passChangeErrorText != null)
+                {
+                    passChangeErrorText.text = "現在のパスワードが正しくありません";
+                }
+            }
+        ));
+    }
+
+    [System.Serializable]
+    private class UserInfoResponse
+    {
+        public string userId;
+        public string email;
+        public string childName;
+    }
+
+    [System.Serializable]
+    private class PasswordChangeRequest
+    {
+        public string userId;
+        public string currentPassword;
+        public string newPassword;
     }
 
     [System.Serializable]
