@@ -55,6 +55,14 @@ public class CommonManager : MonoBehaviour
     [SerializeField] private TMP_InputField confirmNewPassInput;
     [SerializeField] private TMP_Text passChangeErrorText;
 
+    // ==========================================
+    // フィールド欄に追加
+    // ==========================================
+    [Header("API連携用：保護者パスワード初回設定UI")]
+    [SerializeField] private TMP_InputField setParentPassInput;
+    [SerializeField] private TMP_InputField setParentPassConfirmInput;
+    [SerializeField] private TMP_Text setParentPassErrorText; // 任意（あれば割り当て）
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetSessionOnPlay()
     {
@@ -390,12 +398,102 @@ public class CommonManager : MonoBehaviour
         ));
     }
 
+    // ==========================================
+    // メソッド欄に追加（既存の UserInfoResponse クラスも差し替え）
+    // ==========================================
+
+    // TitlePanelAfterLogin の「保護者専用機能」ボタンの OnClick に設定
+    public void OnClickParentFeatureButton()
+    {
+        if (string.IsNullOrEmpty(UserSession.UserId)) return;
+
+        StartCoroutine(ApiClient.Instance.GetRequest(
+            $"/user?userId={UserSession.UserId}",
+            onSuccess: (json) =>
+            {
+                UserInfoResponse info = JsonUtility.FromJson<UserInfoResponse>(json);
+                if (info != null && info.hasParentPassword)
+                {
+                    // 設定済みなら通常の保護者パスワード入力画面へ
+                    ShowPanel(ParentAuthPanel);
+                }
+                else
+                {
+                    // 未設定（null）なら保護者パスワード設定画面へ
+                    if (setParentPassInput != null) setParentPassInput.text = "";
+                    if (setParentPassConfirmInput != null) setParentPassConfirmInput.text = "";
+                    if (setParentPassErrorText != null) setParentPassErrorText.text = "";
+                    ShowPanel(ParentPassSetPanel);
+                }
+            },
+            onError: (err) => Debug.LogError($"保護者パス確認エラー: {err}")
+        ));
+    }
+
+    // ParentPassSetPanel の「設定」ボタンの OnClick に設定
+    public void OnClickSetParentPassword()
+    {
+        if (setParentPassErrorText != null) setParentPassErrorText.text = "";
+
+        if (setParentPassInput == null || setParentPassConfirmInput == null)
+        {
+            Debug.LogError("CommonSceneManager の Inspector で保護者パスワード設定用の入力欄が未割り当てです");
+            return;
+        }
+
+        string pass = setParentPassInput.text.Trim();
+        string confirm = setParentPassConfirmInput.text.Trim();
+
+        if (string.IsNullOrEmpty(pass))
+        {
+            if (setParentPassErrorText != null) setParentPassErrorText.text = "パスワードを入力してください";
+            return;
+        }
+
+        if (pass != confirm)
+        {
+            if (setParentPassErrorText != null) setParentPassErrorText.text = "パスワード確認が一致しません";
+            return;
+        }
+
+        ParentPassSetRequest req = new ParentPassSetRequest
+        {
+            userId = UserSession.UserId,
+            parentPassword = pass
+        };
+
+        string json = JsonUtility.ToJson(req);
+
+        StartCoroutine(ApiClient.Instance.PostRequest(
+            "/parent-password",
+            json,
+            onSuccess: (responseJson) =>
+            {
+                Debug.Log("保護者パスワード初回設定完了");
+                // 設定完了後、そのまま保護者シーンへ移動（認証画面に戻す場合は ShowPanel(ParentAuthPanel) に変更可）
+                SceneManager.LoadScene(parentSceneName);
+            },
+            onError: (err) =>
+            {
+                if (setParentPassErrorText != null) setParentPassErrorText.text = "設定の保存に失敗しました";
+            }
+        ));
+    }
+
     [System.Serializable]
     private class UserInfoResponse
     {
         public string userId;
         public string email;
         public string childName;
+        public bool hasParentPassword;
+    }
+
+    [System.Serializable]
+    private class ParentPassSetRequest
+    {
+        public string userId;
+        public string parentPassword;
     }
 
     [System.Serializable]
