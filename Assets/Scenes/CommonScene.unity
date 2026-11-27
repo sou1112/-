@@ -392,15 +392,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -531,11 +531,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1669240370}
         m_TargetAssemblyTypeName: CommonManager, Assembly-CSharp
-        m_MethodName: ShowPanel
-        m_Mode: 2
+        m_MethodName: OnClickChangePassword
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1460436716}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2360,7 +2360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u203B\u30A8\u30E9\u30FC\u30E1\u30C3\u30BB\u30FC\u30B8\u3092\u8868\u793A"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99b86a1139db6eb4b9417037342fafab, type: 2}
   m_sharedMaterial: {fileID: -5662826443555789585, guid: 99b86a1139db6eb4b9417037342fafab, type: 2}
@@ -8345,7 +8345,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580083434}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -8384,11 +8384,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1669240370}
         m_TargetAssemblyTypeName: CommonManager, Assembly-CSharp
-        m_MethodName: LoadSceneByName
-        m_Mode: 5
+        m_MethodName: ShowPanel
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 783790816}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ChildScene
@@ -9195,7 +9195,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: "\u30D1\u30B9\u30EF\u30FC\u30C9\u3092\u5165\u529B..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
   m_sharedMaterial: {fileID: -4674738114070305414, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
@@ -9222,15 +9222,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -11024,11 +11024,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.41509432, g: 0.38180846, b: 0.38180846, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.3254902, g: 0.3254902, b: 0.3254902, a: 1}
+    m_HighlightedColor: {r: 0.3254902, g: 0.3254902, b: 0.3254902, a: 1}
+    m_PressedColor: {r: 0.3254902, g: 0.3254902, b: 0.3254902, a: 1}
+    m_SelectedColor: {r: 0.3254902, g: 0.3254902, b: 0.3254902, a: 1}
+    m_DisabledColor: {r: 0.3254902, g: 0.3254902, b: 0.3254902, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -11042,7 +11042,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 774374391}
   m_OnClick:
     m_PersistentCalls:
@@ -12674,7 +12674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5C71\u7530\u592A\u90CE"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
   m_sharedMaterial: {fileID: -4674738114070305414, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
@@ -12855,11 +12855,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1669240370}
         m_TargetAssemblyTypeName: CommonManager, Assembly-CSharp
-        m_MethodName: ShowPanel
-        m_Mode: 2
+        m_MethodName: OpenAccountPanel
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1460436716}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15122,8 +15122,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286611584
+  m_fontColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15408,7 +15408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: "\u30D1\u30B9\u30EF\u30FC\u30C9\u3092\u5165\u529B..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
   m_sharedMaterial: {fileID: -4674738114070305414, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
@@ -15435,15 +15435,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -16026,7 +16026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 000@google.ne.jp
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
   m_sharedMaterial: {fileID: -4674738114070305414, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
@@ -16554,15 +16554,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -22702,9 +22702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'user
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
   m_sharedMaterial: {fileID: -4674738114070305414, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
@@ -24249,6 +24247,13 @@ MonoBehaviour:
   regPasswordInput: {fileID: 1246191186}
   regConfirmPasswordInput: {fileID: 1073797722}
   regErrorText: {fileID: 1307118636}
+  accountUserIdText: {fileID: 1536968003}
+  accountEmailText: {fileID: 1076618705}
+  accountChildNameText: {fileID: 859438747}
+  currentPassInput: {fileID: 1042003362}
+  newPassInput: {fileID: 1475690498}
+  confirmNewPassInput: {fileID: 2059386992}
+  passChangeErrorText: {fileID: 183838369}
 --- !u!4 &1669240371
 Transform:
   m_ObjectHideFlags: 0
@@ -26256,7 +26261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u203B\u203B\u203B\u203B\u203B\u203B\u203B\u203B"
+  m_text: '********'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
   m_sharedMaterial: {fileID: -4674738114070305414, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
@@ -27768,11 +27773,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1669240370}
         m_TargetAssemblyTypeName: CommonManager, Assembly-CSharp
-        m_MethodName: ShowPanel
-        m_Mode: 2
+        m_MethodName: OpenPasswordChangeDialog
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1939849087}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29215,15 +29220,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -29883,7 +29888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: "\u30D1\u30B9\u30EF\u30FC\u30C9\u3092\u5165\u529B..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
   m_sharedMaterial: {fileID: -4674738114070305414, guid: 982fed6b3d48c0a468d9648f73cd86f1, type: 2}
@@ -29910,15 +29915,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
